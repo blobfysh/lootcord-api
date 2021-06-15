@@ -1,0 +1,48 @@
+{
+  "name": "lootcord-api",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "author": "blobfysh",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "concurrently \"tsc -w\" \"nodemon -r dotenv/config dist/server.js\"",
+    "start": "node -r dotenv/config dist/server.js",
+    "lint": "eslint src --ext .ts"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*"
+    ],
+    "watch": [
+      "src"
+    ],
+    "ext": ".ts,.js",
+    "delay": "3500"
+  },
+  "dependencies": {
+    "connect-mongo": "^4.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "ioredis": "^4.27.3",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/express-rate-limit": "^5.1.1",
+    "@types/ioredis": "^4.26.4",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/mysql": "^2.15.18",
+    "@types/node-fetch": "^2.5.10",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "concurrently": "^6.2.0",
+    "eslint": "^7.27.0",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.3.2"
+  }
+}
