@@ -74,9 +74,7 @@ Removes item from specified user in the guild with the ID: `id`.
 }
 ```
 
-# Contributing
-
-## Development
+# Development
 Install dependencies:
 ```bash
 yarn
